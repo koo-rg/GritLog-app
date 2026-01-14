@@ -1,0 +1,5 @@
+{
+  "name": "Grit Log: For the Resolute",
+  "description": "An application for tracking and visualizing the performance of rugby players, including weight, strength training maxes, and Bronco test times. Features an admin mode for data management to give your team the winning edge.",
+  "requestFramePermissions": []
+}

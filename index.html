@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grit Log: For the Resolute</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Teko:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Futuristic (default for detail page)
+              'navy': '#0A0E17',
+              'slate': '#1A202C',
+              'light-slate': '#2D3748',
+              'accent': '#00F5D4',
+              'accent-light': '#81E6D9',
+              'gray-text': '#A0AEC0',
+              'pink': '#EC4899',
+              'purple': '#8B5CF6',
+              'sky': '#0ea5e9',
+              'orange': '#f97316',
+              'teal': '#14b8a6',
+
+              // Previous theme (for home page)
+              'old-navy': '#1C1C1E',
+              'old-slate': '#333336',
+              'old-light-slate': '#4D4D52',
+              'old-accent': '#38b2ac',
+              'old-accent-light': '#81e6d9',
+              'old-gray-text': '#BDBDC2',
+
+              // New color for the "Grit Log" title
+              'rust-orange': '#D95F2B',
+              'danger': '#B00020',
+              'danger-light': '#CF6679',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Teko', 'sans-serif'], // For the title
+            },
+            backgroundImage: {
+              'futuristic-gradient': 'radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.2) 0%, transparent 45%), radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.15) 0%, transparent 45%)',
+              'home-vibrant-gradient': 'linear-gradient(to bottom left, #172554 60%, #86198f)',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              pulseGlow: {
+                '0%, 100%': { filter: 'drop-shadow(0 0 4px #00F5D4)' },
+                '50%': { filter: 'drop-shadow(0 0 10px #00F5D4)' },
+              },
+              oldPulseGlow: {
+                '0%, 100%': { filter: 'drop-shadow(0 0 3px #81e6d9)' },
+                '50%': { filter: 'drop-shadow(0 0 8px #81e6d9)' },
+              }
+            },
+            animation: {
+              fadeInUp: 'fadeInUp 0.5s ease-out forwards',
+              pulseGlow: 'pulseGlow 2.5s infinite ease-in-out',
+              oldPulseGlow: 'oldPulseGlow 2.5s infinite ease-in-out',
+            },
+            boxShadow: {
+              'accent-glow': '0 0 15px rgba(0, 245, 212, 0.3)',
+              'old-accent-glow': '0 0 15px rgba(129, 230, 217, 0.4)',
+            }
+          },
+        },
+      }
+    </script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai"
+  }
+}
+</script>
+</head>
+  <body class="font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
